@@ -20,19 +20,13 @@ endif
 call plug#begin('~/.nvim/plugged')
 
 Plug 'morhetz/gruvbox'
-Plug 'jremmen/vim-ripgrep'
 Plug 'codota/tabnine-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'leafgarland/typescript-vim'
 Plug 'mbbill/undotree'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'rking/ag.vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
-Plug 'puremourning/vimspector'
-Plug 'vim-airline/vim-airline'
 Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 Plug 'kyazdani42/nvim-web-devicons' " lua
 Plug 'kyazdani42/nvim-tree.lua' " lua
@@ -45,11 +39,8 @@ Plug 'nvim-lua/completion-nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'mhinz/vim-startify'
-Plug 'pwntester/octo.nvim'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" Use release branch (recommend)
 call plug#end()
 
 " Automatically install missing plugins on startup
@@ -57,3 +48,5 @@ autocmd VimEnter *
   \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \|   PlugInstall --sync | q
   \| endif
+
+packloadall

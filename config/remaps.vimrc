@@ -29,13 +29,22 @@ nnoremap <leader>n :NvimTreeFindFile<CR>
 nnoremap <Leader>pp :lua require'telescope.builtin'.planets{}
 
 " Telescope GIT
-nnoremap <leader>gs <cmd>lua require('telescope.builtin').git_status()<cr>
+nnoremap <leader>gS <cmd>lua require('telescope.builtin').git_status()<cr>
 nnoremap <leader>gf <cmd>lua require('telescope.builtin').git_files()<cr>
 nnoremap <leader>gb <cmd>lua require('telescope.builtin').git_branches()<cr>
+nnoremap <leader>as <cmd>lua require('telescope.builtin').live_grep()<cr>
 
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+
+" Fugitive config
+nmap <leader>gs :G<CR>
+nmap <leader>gc :Git commit<CR>
+nmap <leader>gp :Git push<CR>
+nmap <leader>gh :Ghdiffsplit <CR>
+nmap <leader>gj :diffget //3<CR>
+nmap <leader>gf :diffget //2<CR>
 
 " No highlight on double <CR>
 nnoremap <CR> :noh<CR><CR>
