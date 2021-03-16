@@ -19,5 +19,5 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 " Fugitive
 "
 nnoremap <leader>gs :G<cr>
-nnoremap <leader>gc :Gcommit<cr>
-nnoremap <leader>gp :Gpush<cr>
+nnoremap <leader>gc :Git commit<cr>
+nnoremap <leader>gp :Git push<cr>
