@@ -1,3 +1,21 @@
+" My custom VIM remaps
+
+let mapleader = ","
+
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>l :wincmd l<CR>
+nnoremap <leader>hs :sp<CR>
+nnoremap <leader>vs :vsplit<CR>
+nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+nnoremap <silent> <leader>+ :vertical resize +5<CR>
+nnoremap <silent> <leader>- :vertical resize -5<CR>
+
+" No highlight on double <CR>
+nnoremap <CR> :noh<CR><CR>
+
+" Load general.vimrc
 source $HOME/.config/nvim/config/general.vimrc
 
 " Plugins
@@ -21,23 +39,6 @@ call plug#end()
 " Install plugins and then map them
 "
 source $HOME/.config/nvim/config/plugin_maps.vimrc
-
-" My custom VIM remaps
-
-let mapleader = ","
-
-nnoremap <leader>h :wincmd h<CR>
-nnoremap <leader>j :wincmd j<CR>
-nnoremap <leader>k :wincmd k<CR>
-nnoremap <leader>l :wincmd l<CR>
-nnoremap <leader>hs :sp<CR>
-nnoremap <leader>vs :vsplit<CR>
-nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
-nnoremap <silent> <leader>+ :vertical resize +5<CR>
-nnoremap <silent> <leader>- :vertical resize -5<CR>
-
-" No highlight on double <CR>
-nnoremap <CR> :noh<CR><CR>
 
 colorscheme base16-default-dark
 
