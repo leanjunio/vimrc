@@ -30,6 +30,7 @@ call plug#begin('~/.nvim/plugged')
   Plug 'tpope/vim-fugitive'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
+  Plug 'nvim-telescope/telescope-fzy-native.nvim'
   Plug 'nvim-lua/popup.nvim'
   Plug 'lewis6991/gitsigns.nvim'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
@@ -62,6 +63,12 @@ require'bufferline'.setup {
     mappings = true
   }
 }
+EOF
+
+" Telescope
+"
+:lua << EOF
+require('telescope').load_extension('fzy_native')
 EOF
 
 source $HOME/.config/nvim/config/coc.vimrc
