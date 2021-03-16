@@ -12,14 +12,14 @@ set termguicolors
 
 " Telescope
 "
-" Find files using Telescope command-line sugar.
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fg :lua require('telescope.builtin').live_grep({ prompt_prefix=🔍 })<CR>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+nnoremap <leader>gf <cmd>lua require('telescope.builtin').git_files()<cr>
 " Fugitive
 "
 nnoremap <leader>gs :G<cr>
 nnoremap <leader>gc :Git commit<cr>
 nnoremap <leader>gp :Git push<cr>
+nnoremap <leader>gd :Gdiffsplit<cr>
