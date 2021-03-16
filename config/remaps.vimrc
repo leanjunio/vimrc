@@ -1,7 +1,6 @@
 " Remaps
 
 let mapleader = ","
-"
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
@@ -14,10 +13,6 @@ nnoremap <silent> <leader>+ :vertical resize +5<CR>
 nnoremap <silent> <leader>- :vertical resize -5<CR>
 
 " LSP Config
-set completeopt=menuone,noinsert,noselect
-let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
-
-lua require'lspconfig'.tsserver.setup{on_attach=require'completion'.on_attach}
 
 "NvimTree
 nnoremap <C-n> :NvimTreeToggle<CR>
@@ -30,7 +25,7 @@ nnoremap <Leader>pp :lua require'telescope.builtin'.planets{}
 
 " Telescope GIT
 nnoremap <leader>gS <cmd>lua require('telescope.builtin').git_status()<cr>
-nnoremap <leader>gf <cmd>lua require('telescope.builtin').git_files()<cr>
+nnoremap <leader>gg <cmd>lua require('telescope.builtin').git_files()<cr>
 nnoremap <leader>gb <cmd>lua require('telescope.builtin').git_branches()<cr>
 nnoremap <leader>as <cmd>lua require('telescope.builtin').live_grep()<cr>
 
@@ -67,6 +62,12 @@ omap ag <Plug>(coc-git-chunk-outer)
 xmap ag <Plug>(coc-git-chunk-outer)
 
 " Mappings for CoCList
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
 " Show all diagnostics.
 nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
