@@ -15,6 +15,7 @@ call plug#begin('~/.nvim/plugged')
   Plug 'nvim-lua/popup.nvim'
   Plug 'lewis6991/gitsigns.nvim'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " Install plugins and then map them
@@ -61,3 +62,5 @@ require'bufferline'.setup {
   }
 }
 EOF
+
+source $HOME/.config/nvim/config/coc.vimrc
