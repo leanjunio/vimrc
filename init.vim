@@ -35,6 +35,7 @@ call plug#begin('~/.nvim/plugged')
   Plug 'lewis6991/gitsigns.nvim'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'puremourning/vimspector'
 call plug#end()
 
 " Install plugins and then map them
