@@ -1,75 +1,50 @@
-" My custom VIM remaps
+let mapleader=","
+let maplocalleader=","
 
-let mapleader = ","
+set relativenumber
 
-nnoremap <leader>h :wincmd h<CR>
-nnoremap <leader>j :wincmd j<CR>
-nnoremap <leader>k :wincmd k<CR>
-nnoremap <leader>l :wincmd l<CR>
-nnoremap <leader>hs :sp<CR>
-nnoremap <leader>vs :vsplit<CR>
-nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
-nnoremap <silent> <leader>+ :vertical resize +5<CR>
-nnoremap <silent> <leader>- :vertical resize -5<CR>
+if exists('g:vscode')
+	" VSCode extension
+else
+	call plug#begin('~/.vim/plugged')
+		Plug 'mhinz/vim-startify'
+		Plug 'chriskempson/base16-vim'
+		Plug 'kyazdani42/nvim-web-devicons' " for file icons
+		Plug 'kyazdani42/nvim-tree.lua'
+		Plug 'neoclide/coc.nvim', {'branch': 'release'}
+		Plug 'nvim-lua/popup.nvim'
+		Plug 'nvim-lua/plenary.nvim'
+		Plug 'vim-airline/vim-airline'
+		Plug 'vim-airline/vim-airline-themes'
+		Plug 'tpope/vim-fugitive'
+		Plug 'nvim-lua/popup.nvim'
+		Plug 'nvim-lua/plenary.nvim'
+		Plug 'nvim-telescope/telescope.nvim'
+		Plug 'nvim-telescope/telescope-fzy-native.nvim'
+	call plug#end()
 
-" No highlight on double <CR>
-nnoremap <CR> :noh<CR><CR>
+	lua require('plugins')
 
-" Load general.vimrc
-source $HOME/.config/nvim/config/general.vimrc
 
-" Plugins
-"
-call plug#begin('~/.nvim/plugged')
-  Plug 'kyazdani42/nvim-web-devicons' " for file icons
-  Plug 'kyazdani42/nvim-tree.lua'
-  Plug 'glepnir/spaceline.vim'
-  Plug 'ryanoasis/vim-devicons'
-  Plug 'chriskempson/base16-vim'
-  Plug 'akinsho/nvim-bufferline.lua'
-  Plug 'tpope/vim-fugitive'
-  Plug 'nvim-lua/plenary.nvim'
-  Plug 'nvim-telescope/telescope.nvim'
-  Plug 'nvim-telescope/telescope-fzy-native.nvim'
-  Plug 'nvim-lua/popup.nvim'
-  Plug 'lewis6991/gitsigns.nvim'
-  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  Plug 'puremourning/vimspector'
-call plug#end()
+	" Find files using Telescope command-line sugar.
+	nnoremap <leader>gg <cmd>Telescope git_files<cr>
+	nnoremap <leader>ff <cmd>Telescope find_files<cr>
+	nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+	nnoremap <leader>fb <cmd>Telescope buffers<cr>
+	nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
-" Install plugins and then map them
-"
-source $HOME/.config/nvim/config/plugin_maps.vimrc
+	colorscheme base16-gruvbox-dark-hard
 
-colorscheme base16-default-dark
+	set shiftwidth=2
+	set softtabstop=2 
+	set tabstop=2
+	set termguicolors
+	set nu
 
-" TreeSitter
-"
-:lua << EOF
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-  highlight = {
-    enable = true,              -- false will disable the whole extension
-    disable = { "c", "rust" },  -- list of language that will be disabled
-  },
-}
-EOF
+	source $HOME/.config/nvim/plugin/nvim-tree.vimrc
+	source $HOME/.config/nvim/plugin/coc.vimrc
+	source $HOME/.config/nvim/plugin/telescope.vim
 
-" Bufferline
-"
-:lua << EOF
-require'bufferline'.setup {
-  options = {
-    mappings = true
-  }
-}
-EOF
-
-" Telescope
-"
-:lua << EOF
-require('telescope').load_extension('fzy_native')
-EOF
-
-source $HOME/.config/nvim/config/coc.vimrc
+	" No highlight on double <CR>
+	nnoremap <CR> :noh<CR><CR>
+endif
