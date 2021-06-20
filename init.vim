@@ -8,8 +8,10 @@ set tabstop=2
 
 if exists('g:vscode')
 	" VSCode extension
+	nnoremap <leader>as <Cmd>call VSCodeNotify('workbench.action.findInFiles', { 'query': expand('<cword>')})<CR>
 else
 	call plug#begin('~/.vim/plugged')
+	Plug 'neovim/nvim-lspconfig'
 	Plug 'mhinz/vim-startify'
 	Plug 'chriskempson/base16-vim'
 	Plug 'kyazdani42/nvim-web-devicons' " for file icons
@@ -44,6 +46,15 @@ else
 
 	set termguicolors
 	set nu
+	set hidden
+	set noswapfile
+	set nobackup
+	set undodir=~/.vim/undodir
+	set undofile
+	set nohlsearch
+	set incsearch
+	set colorcolumn=80
+	set signcolumn=yes
 
 	source $HOME/.config/nvim/plugin/nvim-tree.vimrc
 	source $HOME/.config/nvim/plugin/coc.vimrc
@@ -55,4 +66,7 @@ else
 
 	" Bufferline
 	lua require('bufferline').setup{}
+
+	lua require'lspconfig'.tsserver.setup{}
+
 endif
