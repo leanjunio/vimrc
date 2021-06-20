@@ -14,7 +14,6 @@ else
 		Plug 'chriskempson/base16-vim'
 		Plug 'kyazdani42/nvim-web-devicons' " for file icons
 		Plug 'kyazdani42/nvim-tree.lua'
-		Plug 'neoclide/coc.nvim', {'branch': 'release'}
 		Plug 'nvim-lua/popup.nvim'
 		Plug 'nvim-lua/plenary.nvim'
 		Plug 'vim-airline/vim-airline'
@@ -26,6 +25,7 @@ else
 		Plug 'nvim-telescope/telescope-fzy-native.nvim'
 		Plug 'codota/tabnine-vim'
 		Plug 'neovim/nvim-lspconfig'
+		Plug 'hrsh7th/nvim-compe'
 	call plug#end()
 
 	lua require('plugins')
@@ -45,8 +45,10 @@ else
 	set nu
 
 	source $HOME/.config/nvim/plugin/nvim-tree.vimrc
-	source $HOME/.config/nvim/plugin/coc.vimrc
+	" source $HOME/.config/nvim/plugin/coc.vimrc
 	source $HOME/.config/nvim/plugin/telescope.vim
+	source $HOME/.config/nvim/plugin/nvim-compe.vim
+	source $HOME/.config/nvim/plugin/lsp.vim
 
 	" No highlight on double <CR>
 	nnoremap <CR> :noh<CR><CR>
