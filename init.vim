@@ -2,6 +2,9 @@ let mapleader=","
 let maplocalleader=","
 
 set relativenumber
+	set shiftwidth=2
+	set softtabstop=2 
+	set tabstop=2
 
 if exists('g:vscode')
 	" VSCode extension
@@ -33,11 +36,8 @@ else
 	nnoremap <leader>fb <cmd>Telescope buffers<cr>
 	nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
-	colorscheme base16-gruvbox-dark-hard
+	colorscheme base16-ashes
 
-	set shiftwidth=2
-	set softtabstop=2 
-	set tabstop=2
 	set termguicolors
 	set nu
 
