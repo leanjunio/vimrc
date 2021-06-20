@@ -27,6 +27,8 @@ else
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'hrsh7th/nvim-compe'
 	Plug 'nvim-lua/completion-nvim'
+	Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
+	Plug 'akinsho/nvim-bufferline.lua'
 	call plug#end()
 
 	lua require('plugins')
@@ -50,4 +52,7 @@ else
 
 	" No highlight on double <CR>
 	nnoremap <CR> :noh<CR><CR>
+
+	" Bufferline
+	lua require('bufferline').setup{}
 endif
