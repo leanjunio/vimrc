@@ -25,15 +25,11 @@ else
 	Plug 'nvim-telescope/telescope-fzy-native.nvim'
 	Plug 'codota/tabnine-vim'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-	" Plug 'neovim/nvim-lspconfig'
 	Plug 'hrsh7th/nvim-compe'
 	Plug 'nvim-lua/completion-nvim'
 	call plug#end()
 
 	lua require('plugins')
-	" lua require('lsps')
-
-	" lua require'lspconfig'.tsserver.setup{on_attach=require'completion'.on_attach}
 
 	" Find files using Telescope command-line sugar.
 	nnoremap <leader>gg <cmd>Telescope git_files<cr>
@@ -51,7 +47,6 @@ else
 	source $HOME/.config/nvim/plugin/coc.vimrc
 	source $HOME/.config/nvim/plugin/telescope.vim
 	source $HOME/.config/nvim/plugin/nvim-compe.vim
-	" source $HOME/.config/nvim/plugin/lsp.vim
 
 	" No highlight on double <CR>
 	nnoremap <CR> :noh<CR><CR>
