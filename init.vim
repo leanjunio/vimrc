@@ -25,9 +25,11 @@ else
 		Plug 'nvim-telescope/telescope.nvim'
 		Plug 'nvim-telescope/telescope-fzy-native.nvim'
 		Plug 'codota/tabnine-vim'
+		Plug 'neovim/nvim-lspconfig'
 	call plug#end()
 
 	lua require('plugins')
+	lua require('lsps')
 
 
 	" Find files using Telescope command-line sugar.
