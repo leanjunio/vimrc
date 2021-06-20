@@ -47,8 +47,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/leanjunio/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/leanjunio/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/leanjunio/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/leanjunio/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/leanjunio/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/Users/leanjunio/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/leanjunio/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/leanjunio/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/leanjunio/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/leanjunio/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -77,64 +77,64 @@ _G.packer_plugins = {
     config = { "vim.cmd[[ALEEnable]]" },
     loaded = false,
     needs_bufread = true,
-    path = "/home/leanjunio/.local/share/nvim/site/pack/packer/opt/ale"
+    path = "/Users/leanjunio/.local/share/nvim/site/pack/packer/opt/ale"
   },
   ["colorbuddy.vim"] = {
     loaded = true,
-    path = "/home/leanjunio/.local/share/nvim/site/pack/packer/start/colorbuddy.vim"
+    path = "/Users/leanjunio/.local/share/nvim/site/pack/packer/start/colorbuddy.vim"
   },
   ["completion-nvim"] = {
     after = { "vim-vsnip", "vim-vsnip-integ" },
     loaded = false,
     needs_bufread = false,
-    path = "/home/leanjunio/.local/share/nvim/site/pack/packer/opt/completion-nvim"
+    path = "/Users/leanjunio/.local/share/nvim/site/pack/packer/opt/completion-nvim"
   },
   dracula = {
     loaded = true,
-    path = "/home/leanjunio/.local/share/nvim/site/pack/packer/start/dracula"
+    path = "/Users/leanjunio/.local/share/nvim/site/pack/packer/start/dracula"
   },
   firenvim = {
     loaded = true,
-    path = "/home/leanjunio/.local/share/nvim/site/pack/packer/start/firenvim"
+    path = "/Users/leanjunio/.local/share/nvim/site/pack/packer/start/firenvim"
   },
   ["gitsigns.nvim"] = {
     config = { "\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0" },
     loaded = true,
-    path = "/home/leanjunio/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
+    path = "/Users/leanjunio/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
   },
   ["markdown-preview.nvim"] = {
     commands = { "MarkdownPreview" },
     loaded = false,
     needs_bufread = false,
-    path = "/home/leanjunio/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim"
+    path = "/Users/leanjunio/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "/home/leanjunio/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
+    path = "/Users/leanjunio/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/home/leanjunio/.local/share/nvim/site/pack/packer/start/packer.nvim"
+    path = "/Users/leanjunio/.local/share/nvim/site/pack/packer/start/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/home/leanjunio/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+    path = "/Users/leanjunio/.local/share/nvim/site/pack/packer/start/plenary.nvim"
   },
   ["vim-closer"] = {
     loaded = true,
-    path = "/home/leanjunio/.local/share/nvim/site/pack/packer/start/vim-closer"
+    path = "/Users/leanjunio/.local/share/nvim/site/pack/packer/start/vim-closer"
   },
   ["vim-dispatch"] = {
     commands = { "Dispatch", "Make", "Focus", "Start" },
     loaded = false,
     needs_bufread = false,
-    path = "/home/leanjunio/.local/share/nvim/site/pack/packer/opt/vim-dispatch"
+    path = "/Users/leanjunio/.local/share/nvim/site/pack/packer/opt/vim-dispatch"
   },
   ["vim-matchup"] = {
-    after_files = { "/home/leanjunio/.local/share/nvim/site/pack/packer/opt/vim-matchup/after/plugin/matchit.vim" },
+    after_files = { "/Users/leanjunio/.local/share/nvim/site/pack/packer/opt/vim-matchup/after/plugin/matchit.vim" },
     loaded = false,
     needs_bufread = true,
-    path = "/home/leanjunio/.local/share/nvim/site/pack/packer/opt/vim-matchup"
+    path = "/Users/leanjunio/.local/share/nvim/site/pack/packer/opt/vim-matchup"
   },
   ["vim-vsnip"] = {
     load_after = {
@@ -142,16 +142,16 @@ _G.packer_plugins = {
     },
     loaded = false,
     needs_bufread = false,
-    path = "/home/leanjunio/.local/share/nvim/site/pack/packer/opt/vim-vsnip"
+    path = "/Users/leanjunio/.local/share/nvim/site/pack/packer/opt/vim-vsnip"
   },
   ["vim-vsnip-integ"] = {
-    after_files = { "/home/leanjunio/.local/share/nvim/site/pack/packer/opt/vim-vsnip-integ/after/plugin/vsnip_integ.vim" },
+    after_files = { "/Users/leanjunio/.local/share/nvim/site/pack/packer/opt/vim-vsnip-integ/after/plugin/vsnip_integ.vim" },
     load_after = {
       ["completion-nvim"] = true
     },
     loaded = false,
     needs_bufread = false,
-    path = "/home/leanjunio/.local/share/nvim/site/pack/packer/opt/vim-vsnip-integ"
+    path = "/Users/leanjunio/.local/share/nvim/site/pack/packer/opt/vim-vsnip-integ"
   }
 }
 
@@ -175,17 +175,17 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType cmake ++once lua require("packer.load")({'ale'}, { ft = "cmake" }, _G.packer_plugins)]]
-vim.cmd [[au FileType racket ++once lua require("packer.load")({'ale'}, { ft = "racket" }, _G.packer_plugins)]]
-vim.cmd [[au FileType vim ++once lua require("packer.load")({'ale'}, { ft = "vim" }, _G.packer_plugins)]]
-vim.cmd [[au FileType markdown ++once lua require("packer.load")({'ale'}, { ft = "markdown" }, _G.packer_plugins)]]
+vim.cmd [[au FileType sh ++once lua require("packer.load")({'ale'}, { ft = "sh" }, _G.packer_plugins)]]
 vim.cmd [[au FileType tex ++once lua require("packer.load")({'ale'}, { ft = "tex" }, _G.packer_plugins)]]
+vim.cmd [[au FileType c ++once lua require("packer.load")({'ale'}, { ft = "c" }, _G.packer_plugins)]]
+vim.cmd [[au FileType vim ++once lua require("packer.load")({'ale'}, { ft = "vim" }, _G.packer_plugins)]]
+vim.cmd [[au FileType racket ++once lua require("packer.load")({'ale'}, { ft = "racket" }, _G.packer_plugins)]]
 vim.cmd [[au FileType zsh ++once lua require("packer.load")({'ale'}, { ft = "zsh" }, _G.packer_plugins)]]
 vim.cmd [[au FileType bash ++once lua require("packer.load")({'ale'}, { ft = "bash" }, _G.packer_plugins)]]
-vim.cmd [[au FileType html ++once lua require("packer.load")({'ale'}, { ft = "html" }, _G.packer_plugins)]]
-vim.cmd [[au FileType sh ++once lua require("packer.load")({'ale'}, { ft = "sh" }, _G.packer_plugins)]]
 vim.cmd [[au FileType cpp ++once lua require("packer.load")({'ale'}, { ft = "cpp" }, _G.packer_plugins)]]
-vim.cmd [[au FileType c ++once lua require("packer.load")({'ale'}, { ft = "c" }, _G.packer_plugins)]]
+vim.cmd [[au FileType cmake ++once lua require("packer.load")({'ale'}, { ft = "cmake" }, _G.packer_plugins)]]
+vim.cmd [[au FileType html ++once lua require("packer.load")({'ale'}, { ft = "html" }, _G.packer_plugins)]]
+vim.cmd [[au FileType markdown ++once lua require("packer.load")({'ale'}, { ft = "markdown" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)

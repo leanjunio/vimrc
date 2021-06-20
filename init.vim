@@ -24,6 +24,7 @@ else
 		Plug 'nvim-lua/plenary.nvim'
 		Plug 'nvim-telescope/telescope.nvim'
 		Plug 'nvim-telescope/telescope-fzy-native.nvim'
+		Plug 'codota/tabnine-vim'
 	call plug#end()
 
 	lua require('plugins')
@@ -47,4 +48,5 @@ else
 
 	" No highlight on double <CR>
 	nnoremap <CR> :noh<CR><CR>
+	inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 endif
