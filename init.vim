@@ -33,8 +33,6 @@ else
 	Plug 'akinsho/nvim-bufferline.lua'
 	call plug#end()
 
-	lua require('plugins')
-
 	" Find files using Telescope command-line sugar.
 	nnoremap <leader>gg <cmd>Telescope git_files<cr>
 	nnoremap <leader>ff <cmd>Telescope find_files<cr>
