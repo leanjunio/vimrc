@@ -19,12 +19,16 @@ else
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'tpope/vim-fugitive'
 	"Plug 'neoclide/coc.nvim', {'branch': 'release'}
-	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+	"Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
 	Plug 'stsewd/fzf-checkout.vim'
 	Plug 'neovim/nvim-lspconfig'
 	Plug 'hrsh7th/nvim-compe'
+	Plug 'hrsh7th/vim-vsnip'
+	Plug 'vim-test/vim-test'
+	Plug 'mattn/efm-langserver'
+	Plug 'dense-analysis/ale'
 	call plug#end()
 
 	colorscheme base16-ashes
@@ -87,9 +91,27 @@ else
 	let g:compe.source.vsnip = v:true
 	let g:compe.source.ultisnips = v:true
 
+	lua require'lj.nvim-compe'
+
 	inoremap <silent><expr> <C-Space> compe#complete()
 	inoremap <silent><expr> <CR>      compe#confirm('<CR>')
 	inoremap <silent><expr> <C-e>     compe#close('<C-e>')
 	inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
 	inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
+
+	" these "Ctrl mappings" work well when Caps Lock is mapped to Ctrl
+	nmap <silent> t<C-n> :TestNearest<CR>
+	nmap <silent> t<C-f> :TestFile<CR>
+	nmap <silent> t<C-s> :TestSuite<CR>
+	nmap <silent> t<C-l> :TestLast<CR>
+	nmap <silent> t<C-g> :TestVisit<CR>
+
+	let test#strategy = "neovim"
+	if has('nvim')
+		tmap <C-o> <C-\><C-n>
+	endif
+
+	" ALE
+	let b:ale_fixers = { 'javascript': ['eslint'], 'typescript': ['eslint'] }
+	let b:ale_linters = { 'javascript': ['eslint'], 'typescript': ['eslint'] }
 endif
