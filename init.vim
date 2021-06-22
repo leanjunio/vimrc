@@ -48,6 +48,7 @@ else
 	nnoremap <CR> :noh<CR><CR>
 
 	nnoremap <leader>gs :G<CR>
+	nnoremap <leader>gp :Git push<CR>
 	nnoremap <leader>gc :Git commit<CR>
 	nnoremap <leader>gg :GFiles<CR>
 	nnoremap <leader>ag :Ag<CR>
