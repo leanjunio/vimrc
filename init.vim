@@ -18,7 +18,7 @@ else
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'tpope/vim-fugitive'
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
@@ -41,8 +41,10 @@ else
 	set colorcolumn=80
 	set signcolumn=yes
 	set completeopt=menuone,noselect	
+
 	source $HOME/.config/nvim/plugin/nvim-tree.vimrc
-	source $HOME/.config/nvim/plugin/coc.vimrc
+	source $HOME/.config/nvim/plugin/lsp.vim
+	"source $HOME/.config/nvim/plugin/coc.vimrc
 
 	" No highlight on double <CR>
 	nnoremap <CR> :noh<CR><CR>
@@ -50,7 +52,9 @@ else
 	nnoremap <leader>gs :G<CR>
 	nnoremap <leader>gp :Git push<CR>
 	nnoremap <leader>gc :Git commit<CR>
+
 	nnoremap <leader>gg :GFiles<CR>
+	nnoremap <leader>ff :Files<CR>
 	nnoremap <leader>ag :Ag<CR>
 	nnoremap <leader>rg :Rg<CR>
 
