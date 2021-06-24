@@ -76,7 +76,8 @@ require('telescope').setup {
 }
 
 
-vim.api.nvim_set_keymap("n", "<Leader>ff", ":Telescope git_files<CR>", { noremap = true, silent = true })
-
 require('telescope').load_extension('fzy_native')
+
+-- Telescope mappings
+vim.api.nvim_set_keymap("n", "<Leader>ff", ":Telescope git_files<CR>", { noremap = true, silent = true })
 
