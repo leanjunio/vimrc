@@ -33,5 +33,13 @@ return packer.startup(function()
 		config = function() require 'plugins.telescope' end
 
 	}
+	use {
+		'hoob3rt/lualine.nvim',
+		requires = {'kyazdani42/nvim-web-devicons', opt = true},
+		config = function() require 'plugins.lualine' end
+	}	
+	use 'tpope/vim-fugitive'
+	use 'nvim-lua/lsp-status.nvim'
+	use 'danilo-augusto/vim-afterglow'
 
 end)

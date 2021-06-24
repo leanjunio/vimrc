@@ -1,7 +1,6 @@
 set runtimepath^=~/.vim runtimepath+=~/.vim/ater
 let &packpath = &runtimepath
 
-
 let mapleader = ","
 let maplocalleader = ","
 
@@ -18,9 +17,11 @@ autocmd BufWritePost plugins.lua PackerCompile
 " call LoadConfig('base')
 " call LoadConfig('keymap')
 
-set nocompatible
-
-"colorscheme arcolors
+colorscheme afterglow
 set termguicolors
-
+set shiftwidth=2
+set nu
+set rnu
+syntax on
+set nohlsearch
 
