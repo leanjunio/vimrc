@@ -39,11 +39,6 @@ lspconfig.tsserver.setup {
   settings = { documentFormatting = false }
 }
 
--- VimLS Setup
-lspconfig.vimls.setup {
-  on_attach = on_attach
-}
-
 local languages = {
   typescript = { prettier, eslint },
   javascript = { prettier, eslint },
