@@ -18,10 +18,11 @@ autocmd BufWritePost plugins.lua PackerCompile
 " call LoadConfig('keymap')
 
 colorscheme afterglow
-set termguicolors
+" set termguicolors
 set shiftwidth=2
 set nu
 set rnu
 syntax on
 set nohlsearch
+set nowrap
 
