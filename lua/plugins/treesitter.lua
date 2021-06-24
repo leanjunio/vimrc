@@ -1,5 +1,5 @@
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "typescript", "javascript"},
+  ensure_installed = { "typescript", "javascript", "dockerfile", "html"},
   indent = {
     enable = true,
   },

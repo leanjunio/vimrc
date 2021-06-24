@@ -83,5 +83,3 @@ vim.api.nvim_set_keymap("n", "<Leader>ff", ":Telescope git_files<CR>", { noremap
 vim.api.nvim_set_keymap("n", "<Leader>gg", ":Telescope git_branches<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<Leader>gc", ":Telescope git_commits<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<Leader>gs", ":Telescope git_status<CR>", { noremap = true, silent = true })
-
-
