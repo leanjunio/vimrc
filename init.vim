@@ -1,5 +1,9 @@
-set runtimepath^=~/.vim runtimepath+=~/.vim/after
+set runtimepath^=~/.vim runtimepath+=~/.vim/ater
 let &packpath = &runtimepath
+
+
+let mapleader = ","
+let maplocalleader = ","
 
 let g:custom_path = '~/.config/nvim/'
 
