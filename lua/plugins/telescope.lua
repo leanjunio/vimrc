@@ -66,7 +66,6 @@ require('telescope').setup {
 	},
 	n = {
 	  ["<c-d>"] = require("telescope.actions").delete_buffer,
-	  ["<leader>ff"] = require("telescope.builtin").find_files,
 	}
       }
     },
@@ -76,6 +75,8 @@ require('telescope').setup {
   },
 }
 
-vim.api.nvim_set_keymap('n', '<Leader>ff', ':Telescope find_fiiles<CR>', { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap("n", "<Leader>ff", ":Telescope git_files<CR>", { noremap = true, silent = true })
 
 require('telescope').load_extension('fzy_native')
+
