@@ -51,5 +51,12 @@ return packer.startup(function()
   use 'tpope/vim-fugitive'
   use 'nvim-lua/lsp-status.nvim'
   use 'danilo-augusto/vim-afterglow'
-
+  use {
+    "folke/trouble.nvim",
+    config = function() require 'plugins.trouble' end
+  }
+  use {
+    'kyazdani42/nvim-tree.lua',
+    config = function() require 'plugins.nvim-tree' end
+  }
 end)
