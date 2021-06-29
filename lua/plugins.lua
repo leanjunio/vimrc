@@ -13,6 +13,7 @@ local use = packer.use
 
 return packer.startup(function()
   use 'wbthomason/packer.nvim'
+  use 'chriskempson/base16-vim'
   use {
     'nvim-treesitter/nvim-treesitter',
     run = 'TSUpdate',
