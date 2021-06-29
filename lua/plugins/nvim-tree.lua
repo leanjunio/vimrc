@@ -38,3 +38,10 @@ vim.g.nvim_tree_bindings = {
 
 vim.api.nvim_set_keymap("n", "<C-n>", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>n", ":NvimTreeFindFile<CR>", { noremap = true, silent = true })
+
+local global = vim.g
+
+-- Default Setups
+global.nvim_tree_side = "right"
+global.nvim_tree_width = 50
+global.nvim_tree_highlight_opened_files = 1
