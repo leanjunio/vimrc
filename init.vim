@@ -9,9 +9,12 @@ let g:custom_path = '~/.config/nvim/'
 exec 'luafile' expand(g:custom_path . 'lua/plugins.lua')
 
 autocmd BufWritePost plugins.lua PackerCompile
-colorscheme base16-gruvbox-light-soft
+colorscheme base16-gruvbox-dark-soft
 set termguicolors
 set shiftwidth=2
+set tabstop=2
+set autoindent
+set noexpandtab
 set nu
 set rnu
 syntax on
